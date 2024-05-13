@@ -1,0 +1,35 @@
+<div class=" bg-neutral-100 min-h-svh">
+  <app-header/>
+  <div class=" flex justify-center p-6">
+    <form (submit)="create()" [formGroup]="payrollForm" class="flex flex-col gap-4 max-w-2xl w-full">
+      <h1 class=" text-2xl font-medium">Add Payroll</h1>
+      <section class=" flex gap-4">
+        <div class=" inputDiv">
+          <label for="email">Member Email</label>
+          <input type="email" id="email" formControlName="memberEmail">
+        </div>
+
+        <div class=" inputDiv">
+          <label for="salary">Salary</label>
+          <input type="number" id="salary" formControlName="salary">
+        </div>
+      </section>
+      <section class=" flex gap-4">
+        <div class=" inputDiv">
+          <label for="bonus">Bonus</label>
+          <input type="number" id="bonus" formControlName="bonus">
+        </div>
+
+        <div class=" inputDiv">
+          <label for="taxes">Tax (%)</label>
+          <input type="number" id="taxes" formControlName="taxes">
+        </div>
+
+      </section>
+      
+      <button type="submit" class=" w-fit px-8 py-1 text-neutral-900 bg-orange-500 rounded">
+        Add Payroll
+      </button>
+    </form>
+  </div>
+</div>

@@ -52,6 +52,8 @@ public class PayrollService {
 
         payroll.setEmployee(employee);
 
+        System.out.println(payrollDTO);
+
         return this.save(payroll);
     }
 

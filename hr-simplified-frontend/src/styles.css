@@ -1,3 +1,47 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.logo {
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.logo div {
+  color: rgb(249 115 22);
+  width: fit-content;
+  transform: rotate(45deg);
+}
+
+.navLink a{
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.activeLink {
+  border-bottom: 2px solid;
+  border-color: rgb(249 115 22);
+}
+
+.inputDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.inputDiv label {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: rgb(64 64 64);
+}
+
+.inputDiv input {
+  border-radius: 0.25rem;
+  padding: 4px 8px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  background-color: rgb(229 229 229);
+  width: 13rem;
+}

@@ -19,5 +19,5 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long> {
     )
     List<Employee> findEmployeeByFilter(String name, String role, String department, LocalDate from, LocalDate to);
 
-    Optional<Employee> findByEmail(String email);
+    Employee findByEmail(String email);
 }

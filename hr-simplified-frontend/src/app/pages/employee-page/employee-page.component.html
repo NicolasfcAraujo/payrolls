@@ -1,0 +1,30 @@
+<div>
+  <app-header/>
+  <div class=" min-h-svh p-6 bg-neutral-100 flex justify-center">
+    <div class=" max-w-4xl w-full mx-6">
+      <h1 class=" text-3xl font-medium">{{ name }}</h1>
+      <div class=" pt-6 flex gap-4">
+        <h1><span class=" font-medium">Role:</span> {{ role }}</h1>
+        <h1><span class=" font-medium">Department:</span> {{ department }}</h1>
+        <h1><span class=" font-medium">Salary:</span> ${{ salary }}</h1>
+        <h1><span class=" font-medium">Hire Date:</span> {{ hireDate }}</h1>
+      </div>
+      <div class=" pt-6 flex gap-4">
+        <h1><span class=" font-medium">Email:</span> {{ email }}</h1>
+        <h1><span class=" font-medium">Phone:</span> {{ phone }}</h1>
+      </div>
+      <div class=" pt-8 flex flex-col gap-4">
+        <h1 class=" text-xl font-medium">Payrolls</h1>
+        <app-payroll-article
+          *ngFor="let payroll of payrolls"
+          [employeeName]="name"
+          [salary]="payroll.salary"
+          [bonus]="payroll.bonus"
+          [taxes]="payroll.taxes"
+          [total]="payroll.total"
+          [paymentDate]="payroll.paymentDate"
+        />
+      </div>
+    </div>
+  </div>
+</div>

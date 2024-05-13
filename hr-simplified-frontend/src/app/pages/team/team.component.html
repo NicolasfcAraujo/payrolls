@@ -1,0 +1,45 @@
+<div class=" bg-neutral-100 min-h-svh">
+  <app-header/>
+  <div class=" flex justify-center p-6">
+    <div class=" max-w-4xl mx-6 flex flex-col gap-4 w-full">
+      <h1 class=" text-2xl font-medium">Team</h1>
+      <form [formGroup]="teamForm" class=" flex flex-col gap-6">
+        <section class=" flex gap-4">
+          <div class=" inputDiv">
+            <label for="name">Name</label>
+            <input type="text" placeholder="John" id="name" formControlName="name">
+          </div>
+
+          <div class=" inputDiv">
+            <label for="role">Role</label>
+            <input type="text" placeholder="Developer" id="role" formControlName="role">
+          </div>
+
+          <div class="inputDiv">
+            <label for="department">Department</label>
+            <input type="text" placeholder="Engineering" id="department" formControlName="department"> 
+          </div>
+        </section>
+        <section class=" flex gap-4">
+          <div class=" inputDiv">
+            <label for="from">Hire Date From</label>
+            <input type="date" id="date" formControlName="from">
+          </div>
+          
+          <div class=" inputDiv">
+            <label for="to">To</label>
+            <input type="date" id="to" formControlName="to">
+          </div>
+        </section>
+      </form>
+
+      <app-employee-article
+        *ngFor="let employee of employees"
+        [name]="employee.name"
+        [role]="employee.role"
+        [department]="employee.department"
+        [id]="employee.id"
+      />
+    </div>
+  </div>
+</div>

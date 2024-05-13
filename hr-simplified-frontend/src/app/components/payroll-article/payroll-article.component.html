@@ -1,0 +1,16 @@
+<article class="w-full rounded border border-neutral-200 shadow-md bg-white p-4 hover:scale-105 duration-200">
+  <div class="flex gap-2 cursor-pointer" (click)="toggle()">
+    <h1><span class=" font-semibold">Payment:</span> {{ paymentDate | date:"yyyy-LL-dd" }}</h1>
+    <h1><span class=" font-semibold">Total:</span> ${{ total }}</h1>
+  </div>
+  <div *ngIf="isOpen">
+    <div class="flex gap-2 p-4">
+      <h1><span class=" font-medium">Salary:</span> ${{ salary }}</h1>
+      <h1><span class=" font-medium">Bonus:</span> ${{ bonus }}</h1>
+      <h1><span class=" font-medium">Tax:</span> {{ taxes }}</h1>
+    </div>
+    <div>
+      <button (click)="downloadPDF()" class=" w-fit py-1 px-8 rounded bg-orange-500 mx-4">Download</button>
+    </div>
+  </div>
+</article>

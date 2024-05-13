@@ -30,14 +30,8 @@ public class EmployeeService {
         return checkedEmployee.get();
     }
 
-    public Employee findByEmail(String email) throws Exception {
-        Optional<Employee> foundEmployee = employeeRepository.findByEmail(email);
-
-        if (foundEmployee.isEmpty()) {
-            throw new Exception(String.format("Employee with e-mail %s not found!", email));
-        }
-
-        return foundEmployee.get();
+    public Employee findByEmail(String email) {
+        return employeeRepository.findByEmail(email);
     }
 
     public List<Employee> filter(FilterDTO filter) {

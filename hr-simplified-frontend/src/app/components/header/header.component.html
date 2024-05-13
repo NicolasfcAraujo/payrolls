@@ -1,0 +1,12 @@
+<header>
+  <div class=" bg-neutral-900 w-full p-6 flex justify-between">
+    <h1 class=" logo text-3xl text-white w-fit"><div><i class="fa-solid fa-money-bill-wave"></i></div>PAYROLLS</h1>
+    <button (click)="logout()" class="py-1 px-8 rounded font-medium text-red-600">Log Out</button>
+  </div>
+  <nav class=" bg-neutral-800 px-6 py-2 flex text-white font-medium gap-6 navLink w-full">
+    <a routerLink="/" routerLinkActive="activeLink" [routerLinkActiveOptions]="{exact: true}">Home</a>
+    <a routerLink="/team" routerLinkActive="activeLink">Team</a>
+    <a routerLink="/payroll" routerLinkActive="activeLink">Payroll</a>
+    <a routerLink="/add-member" routerLinkActive="activeLink">Add Member</a>
+  </nav>
+</header>

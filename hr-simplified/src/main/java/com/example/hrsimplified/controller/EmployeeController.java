@@ -29,7 +29,7 @@ public class EmployeeController {
     }
 
     @GetMapping("/email/{email}")
-    public ResponseEntity<Employee> getByEmail(@PathVariable String email) throws Exception {
+    public ResponseEntity<Employee> getByEmail(@PathVariable String email) {
         return new ResponseEntity<>(employeeService.findByEmail(email), HttpStatus.OK);
     }
 
