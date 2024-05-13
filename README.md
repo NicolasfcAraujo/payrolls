@@ -6,4 +6,4 @@ A simplified payrolls emitter
 
 ![login](https://raw.githubusercontent.com/NicolasfcAraujo/payrolls/main/assets/1.png)
 
-![home](https://raw.githubusercontent.com/NicolasfcAraujo/payrolls/main/assets/2.png])
+![home](https://raw.githubusercontent.com/NicolasfcAraujo/payrolls/main/assets/2.png)
